@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "exercise": "Morning Run",
+    "category": "Cardio",
+    "duration": 30,
+    "sets": null,
+    "reps": null,
+    "date": "2026-09-10",
+    "notes": "Easy pace, 5km loop"
+  },
+  {
+    "id": "2",
+    "exercise": "Bench Press",
+    "category": "Strength",
+    "duration": 20,
+    "sets": 4,
+    "reps": 8,
+    "date": "2026-09-11",
+    "notes": "Increased weight by 2.5kg"
+  },
+  {
+    "id": "3",
+    "exercise": "Yoga Flow",
+    "category": "Flexibility",
+    "duration": 25,
+    "sets": null,
+    "reps": null,
+    "date": "2026-09-12",
+    "notes": "Focus on hip mobility"
+  },
+  {
+    "id": "1789362823258",
+    "exercise": "Cow Pushes",
+    "category": "Strength",
+    "duration": 30,
+    "sets": 2,
+    "reps": 50,
+    "date": "2026-09-17",
+    "notes": "It felt horrible."
+  },
+  {
+    "id": "1789364740413",
+    "exercise": "Lloyd Crunches",
+    "category": "Cardio",
+    "duration": 30,
+    "sets": 2,
+    "reps": 50,
+    "date": "2026-09-15",
+    "notes": "Felt awesome!"
+  }
+]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xzert · Workouts</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="dot"></span>xzert</div>
+      <nav>
+        <a href="index.html"><span class="icon">⌂</span>Dashboard</a>
+        <a href="workouts.html" class="active"><span class="icon">≣</span>Workouts</a>
+        <a href="workout-form.html"><span class="icon">＋</span>Add Workout</a>
+      </nav>
+      <div class="cta">
+        <p>Log every session and watch your consistency add up.</p>
+        <a href="workout-form.html" class="btn btn-primary btn-sm" style="width:100%; text-align:center;">Log Workout</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h1>All <span class="accent">Workouts</span></h1>
+            <p class="subtitle" style="margin-bottom:0;">Every session you've logged, in one place.</p>
+          </div>
+          <a href="workout-form.html" class="btn btn-primary">+ Add Workout</a>
+        </div>
+
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Exercise</th>
+                <th>Category</th>
+                <th>Duration</th>
+                <th>Sets × Reps</th>
+                <th>Notes</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="workouts-body">
+              <!-- populated by workouts.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/workouts.js"></script>
+</body>
+</html>

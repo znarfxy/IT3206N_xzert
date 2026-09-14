@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xzert · Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="dot"></span>xzert</div>
+      <nav>
+        <a href="index.html" class="active"><span class="icon">⌂</span>Dashboard</a>
+        <a href="workouts.html"><span class="icon">≣</span>Workouts</a>
+        <a href="workout-form.html"><span class="icon">＋</span>Add Workout</a>
+      </nav>
+      <div class="cta">
+        <p>Log every session and watch your consistency add up.</p>
+        <a href="workout-form.html" class="btn btn-primary btn-sm" style="width:100%; text-align:center;">Log Workout</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="container">
+        <h1>Good to see you<span class="accent">.</span></h1>
+        <p class="subtitle">Here's a snapshot of your training activity.</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="value" id="stat-total">0</div>
+            <div class="label">Total Workouts</div>
+          </div>
+          <div class="stat-card accent">
+            <div class="value" id="stat-week">0</div>
+            <div class="label">This Week</div>
+          </div>
+          <div class="stat-card">
+            <div class="value" id="stat-minutes">0</div>
+            <div class="label">Total Minutes</div>
+          </div>
+          <div class="stat-card accent">
+            <div class="value" id="stat-categories">0</div>
+            <div class="label">Categories Trained</div>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2>Recent Activity</h2>
+          <a href="workouts.html" class="link">View All</a>
+        </div>
+
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Exercise</th>
+                <th>Category</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody id="recent-body">
+              <!-- populated by dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "xzert",
+  "version": "1.0.0",
+  "description": "Xzert — a lightweight web app for logging and managing daily workout routines.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
