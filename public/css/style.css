@@ -127,6 +127,17 @@ a {
   padding: 40px 40px 80px;
 }
 
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.search-input { flex: 1; }
+.filter-select { width: 180px; }
+.result-count { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+
 h1 {
   font-size: 2.4rem;
   font-weight: 800;
@@ -343,6 +354,15 @@ tbody tr:hover td:first-child {
   margin-bottom: 12px;
 }
 
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 42px 20px;
+  color: var(--muted);
+}
+
+.error-state { color: #f15e6c; }
+
 /* ---- Form -------------------------------------------------------------- */
 
 .form-card {
@@ -422,4 +442,25 @@ textarea {
   font-weight: 600;
   margin-bottom: 20px;
   display: none;
+}
+
+@media (max-width: 760px) {
+  .app-shell { display: block; }
+  .sidebar { width: 100%; padding: 16px; gap: 16px; }
+  .sidebar nav { flex-direction: row; overflow-x: auto; }
+  .sidebar nav a { white-space: nowrap; }
+  .sidebar .cta { display: none; }
+  .container { padding: 28px 18px 56px; }
+  h1 { font-size: 2rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 32px; }
+  .stat-card { padding: 18px; }
+  .section-header { align-items: flex-start; gap: 16px; }
+  .section-header .btn { white-space: nowrap; padding-inline: 16px; }
+  .toolbar { flex-wrap: wrap; }
+  .search-input { flex-basis: 100%; }
+  .filter-select { flex: 1; width: auto; }
+  .card { overflow-x: auto; }
+  table { min-width: 760px; }
+  .form-card { padding: 24px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
 }

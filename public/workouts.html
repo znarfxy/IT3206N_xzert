@@ -31,6 +31,18 @@
           <a href="workout-form.html" class="btn btn-primary">+ Add Workout</a>
         </div>
 
+        <div class="toolbar">
+          <input id="workout-search" class="search-input" type="search" placeholder="Search exercises or notes..." aria-label="Search workouts" />
+          <select id="category-filter" class="filter-select" aria-label="Filter by category">
+            <option value="">All categories</option>
+            <option value="Cardio">Cardio</option>
+            <option value="Strength">Strength</option>
+            <option value="Flexibility">Flexibility</option>
+            <option value="Sports">Sports</option>
+          </select>
+          <span class="result-count" id="workout-count"></span>
+        </div>
+
         <div class="card">
           <table>
             <thead>
