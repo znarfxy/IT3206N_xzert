@@ -1,7 +1,7 @@
 # Xzert — Workout Tracker
 
 A lightweight web app for logging and managing daily workout routines.
-Node.js + Express backend, plain HTML/CSS/JS frontend, JSON file repository.
+Node.js + Express backend, SQLite database, and plain HTML/CSS/JS frontend.
 
 ## Pages
 
@@ -17,9 +17,10 @@ Node.js + Express backend, plain HTML/CSS/JS frontend, JSON file repository.
 workout-tracker/
 ├── server.js                       # Express app + REST API routes
 ├── repository/
-│   └── workoutRepository.js        # Data access layer (CRUD)
+│   └── workoutRepository.js        # SQLite data access layer (CRUD + migration)
 ├── data/
-│   └── workouts.json               # Storage (sample data included)
+│   ├── workouts.json               # Legacy seed data (imported once)
+│   └── xzert.db                    # SQLite database (generated on first run)
 └── public/
     ├── index.html
     ├── workouts.html
@@ -53,6 +54,9 @@ Then open **http://localhost:3000** in your browser.
 
 ## Notes
 
-- Data persists to `data/workouts.json` — no external database needed.
+- Data persists to `data/xzert.db`. On first run, existing records in
+  `data/workouts.json` are imported automatically.
+- The frontend reads and updates data through the Express REST API. Search and
+  category filters on the Workouts page operate on the current API response.
 - Colors and typography are defined as CSS variables at the top of
-  `public/css/style.css`, so the blue/red theme is easy to retint.
+  `public/css/style.css`.
